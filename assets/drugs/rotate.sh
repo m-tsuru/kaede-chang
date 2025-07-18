@@ -18,7 +18,7 @@ for INPUT_FILE in *.${TARGET_EXTENSION}; do
   for angle in 0 90 180 270; do
     OUTPUT_FILE="${BASENAME}_${angle}.${EXTENSION}"
     echo "${angle} => ${OUTPUT_FILE} "
-    convert "${INPUT_FILE}" -rotate "${angle}" -trim "${OUTPUT_FILE}" -size 400x400
+    convert "${INPUT_FILE}" -rotate "${angle}" -size 400x400 -trim "${OUTPUT_FILE}"
   done
 done
 
