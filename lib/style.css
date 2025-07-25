@@ -4,6 +4,10 @@ body {
 }
 
 main {
+    background-image: url('../assets/screens/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     max-width: 100vw;
     max-height: 100vh;
     margin: 0;
@@ -23,7 +27,7 @@ main {
 
     margin: 0 auto;
 
-    background-color: #f0f0f0;
+    background-color: #f0f0f0aa;
 }
 
 .stage img {
