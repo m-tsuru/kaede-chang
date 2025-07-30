@@ -61,6 +61,36 @@
                 </div>
             </div>
         </div>
+
+        <!-- ゲームオーバー画面のオーバーレイ -->
+        <div id="gameover-overlay" class="gameover-overlay" style="display: none;">
+            <div class="gameover-content">
+                <h1 class="gameover-title">ゲームオーバー</h1>
+                <div class="gameover-info">
+                    <p>到達ステージ: <span id="gameover-stage">1</span></p>
+                    <p>最終スコア: <span id="gameover-total-score">0</span>点</p>
+                    <p>プレイ時間: <span id="gameover-play-time">00:00</span></p>
+                </div>
+                <button id="restart-button" class="restart-button">もう一度プレイ</button>
+            </div>
+        </div>
+
+        <!-- 全ゲームクリア画面のオーバーレイ -->
+        <div id="allclear-overlay" class="allclear-overlay" style="display: none;">
+            <div class="allclear-content">
+                <h1 class="allclear-title">🎉 PERFECT CLEAR! 🎉</h1>
+                <div class="allclear-info">
+                    <p>全 <span id="allclear-total-stages">10</span> ステージクリア！</p>
+                    <p>最終スコア: <span id="allclear-final-score">0</span>点</p>
+                    <p>総プレイ時間: <span id="allclear-total-time">00:00</span></p>
+                </div>
+                <div class="allclear-message">
+                    <p>おめでとうございます！</p>
+                    <p>あなたは全てのウイルスを撲滅しました！</p>
+                </div>
+                <button id="allclear-restart-button" class="allclear-restart-button">最初からプレイ</button>
+            </div>
+        </div>
     </main>
 </body>
 

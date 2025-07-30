@@ -270,6 +270,81 @@ main {
     font-size: 24px;
 }
 
+/* ゲームオーバー画面のオーバーレイスタイル */
+.gameover-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.gameover-content {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border: 4px solid #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    width: 90%;
+    animation: bounceIn 0.8s ease-out;
+}
+
+.gameover-title {
+    font-size: 48px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.gameover-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.gameover-info p {
+    font-size: 20px;
+    color: #333;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.gameover-info span {
+    color: #e74c3c;
+    font-size: 24px;
+}
+
+.restart-button {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.restart-button:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* アニメーション */
 @keyframes fadeIn {
     from {
@@ -312,5 +387,126 @@ main {
 
     100% {
         transform: scale(1);
+    }
+}
+
+/* 全ゲームクリア画面のオーバーレイスタイル */
+.allclear-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 140, 0, 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.allclear-content {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border: 6px solid #fff;
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 90%;
+    animation: bounceIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.allclear-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 3s infinite;
+    pointer-events: none;
+}
+
+.allclear-title {
+    font-size: 52px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    background: linear-gradient(45deg, #fff, #ffe55c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.allclear-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.allclear-info p {
+    font-size: 22px;
+    color: #333;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.allclear-info span {
+    color: #FF6B35;
+    font-size: 26px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.allclear-message {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    border: 2px solid #FFD700;
+}
+
+.allclear-message p {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 10px 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.allclear-restart-button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.allclear-restart-button:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
     }
 }
