@@ -182,7 +182,35 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.start-button:active {
+.how-to-play-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-how-to-play-button {
+    display: block;
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    border: 2px solid #333;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.game-how-to-play-button:hover {
+    background: linear-gradient(45deg, #1976D2, #1565C0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-how-to-play-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

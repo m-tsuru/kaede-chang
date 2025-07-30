@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./lib/style.css">
+    <link rel="stylesheet" href="./lib/style.css" defer>
     <script src="./lib/main.js" defer></script>
     <title>doctor</title>
 </head>
@@ -14,7 +14,7 @@
         <!-- ゲーム開始画面 -->
         <div id="start-screen" class="start-screen">
             <div class="start-content">
-                <h1>Dr. Mario</h1>
+                <h1>ドクターひろふみ</h1>
                 <div class="stage-info">
                     <h2>ステージ <span id="start-stage">1</span></h2>
                     <p>ウイルス: <span id="start-virus-count">4</span>個</p>
@@ -43,6 +43,9 @@
                 <div class="info-section">
                     <h3>経過時間</h3>
                     <div id="elapsed-time" class="info-value">00:00</div>
+                </div>
+                <div class="info-section">
+                    <a href="how_to_play.html" class="game-how-to-play-button">遊び方</a>
                 </div>
             </div>
         </div>
