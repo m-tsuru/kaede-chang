@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,45 @@
     <script src="./lib/main.js" defer></script>
     <title>doctor</title>
 </head>
+
 <body>
-<main>
-    <div id="stage" class="stage"></div>
-</main>
-    <div id="gameStart" class=""></div>
+    <main>
+        <!-- ゲーム開始画面 -->
+        <div id="start-screen" class="start-screen">
+            <div class="start-content">
+                <h1>Dr. Mario</h1>
+                <div class="stage-info">
+                    <h2>ステージ <span id="start-stage">1</span></h2>
+                    <p>ウイルス: <span id="start-virus-count">4</span>個</p>
+                    <p>使用色: <span id="start-color-count">1</span>色</p>
+                </div>
+                <button id="start-button" class="start-button">スタート</button>
+            </div>
+        </div>
+
+        <!-- ゲーム画面 -->
+        <div class="game-container" id="game-container" style="display: none;">
+            <div id="stage" class="stage"></div>
+            <div class="info-panel">
+                <div class="info-section">
+                    <h3>ステージ</h3>
+                    <div id="current-stage" class="info-value">1</div>
+                </div>
+                <div class="info-section">
+                    <h3>スコア</h3>
+                    <div id="total-score" class="info-value">0</div>
+                </div>
+                <div class="info-section">
+                    <h3>残りウイルス</h3>
+                    <div id="remaining-virus" class="info-value">0</div>
+                </div>
+                <div class="info-section">
+                    <h3>経過時間</h3>
+                    <div id="elapsed-time" class="info-value">00:00</div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

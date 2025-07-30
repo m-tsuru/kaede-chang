@@ -1,17 +1,27 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 main {
     background-image: url('../assets/screens/background.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    max-width: 100vw;
-    max-height: 100vh;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: calc(100vh - 40px);
 }
 
 .stage {
@@ -19,15 +29,14 @@ main {
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(8, 1fr);
     gap: 4px;
-    aspect-ratio: 1 / 1;
-    max-width: calc(100vh * 8 / 12);
-
-    width: 100vh;
-    height: 100vh;
-
-    margin: 0 auto;
-
+    aspect-ratio: 8 / 12;
+    height: calc(100vh - 40px);
+    max-height: 800px;
     background-color: #f0f0f0aa;
+    border: 3px solid #333;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .stage img {
@@ -35,4 +44,145 @@ main {
     max-height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.info-panel {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
+}
+
+.info-section h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.info-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0066cc;
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stage {
+        height: 60vh;
+        max-height: 500px;
+    }
+
+    .info-panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        min-width: auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .info-section {
+        margin-bottom: 0;
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+/* スタート画面のスタイル */
+.start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.start-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 4px solid #333;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 90%;
+}
+
+.start-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0 0 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stage-info {
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0 30px 0;
+}
+
+.stage-info h2 {
+    font-size: 28px;
+    color: #0066cc;
+    margin: 0 0 15px 0;
+}
+
+.stage-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.start-button {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    border: 3px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 40px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.start-button:hover {
+    background: linear-gradient(45deg, #ff5252, #ff7043);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.start-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
