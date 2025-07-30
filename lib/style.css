@@ -186,3 +186,103 @@ main {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* クリア画面のオーバーレイスタイル */
+.clear-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.clear-content {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border: 4px solid #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    width: 90%;
+    animation: bounceIn 0.8s ease-out;
+}
+
+.clear-title {
+    font-size: 48px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.clear-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.clear-info p {
+    font-size: 20px;
+    color: #333;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.clear-info span {
+    color: #0066cc;
+    font-size: 24px;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
