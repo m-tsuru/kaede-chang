@@ -55,6 +55,53 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.avatar-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-gif {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 3px solid #0066cc;
+    background-color: #f0f8ff;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-gif.animating {
+    animation: avatarThrow 0.8s ease-in-out;
+}
+
+@keyframes avatarThrow {
+    0% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    25% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(0deg);
+        box-shadow: 0 6px 16px rgba(0, 102, 204, 0.6);
+    }
+
+    75% {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
 .info-section {
     margin-bottom: 20px;
     text-align: center;
